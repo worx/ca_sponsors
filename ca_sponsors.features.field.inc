@@ -10,7 +10,7 @@
 function ca_sponsors_field_default_fields() {
   $fields = array();
 
-  // Exported field: 'node-ca_sponsor-field_ca_sponsors_about'
+  // Exported field: 'node-ca_sponsor-field_ca_sponsors_about'.
   $fields['node-ca_sponsor-field_ca_sponsors_about'] = array(
     'field_config' => array(
       'active' => '1',
@@ -31,6 +31,7 @@ function ca_sponsors_field_default_fields() {
           0 => 'format',
         ),
       ),
+      'locked' => '0',
       'module' => 'text',
       'settings' => array(),
       'translatable' => '0',
@@ -76,7 +77,7 @@ function ca_sponsors_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-ca_sponsor-field_ca_sponsors_contact'
+  // Exported field: 'node-ca_sponsor-field_ca_sponsors_contact'.
   $fields['node-ca_sponsor-field_ca_sponsors_contact'] = array(
     'field_config' => array(
       'active' => '1',
@@ -97,6 +98,7 @@ function ca_sponsors_field_default_fields() {
           0 => 'format',
         ),
       ),
+      'locked' => '0',
       'module' => 'text',
       'settings' => array(),
       'translatable' => '0',
@@ -142,7 +144,7 @@ function ca_sponsors_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-ca_sponsor-field_ca_sponsors_dates'
+  // Exported field: 'node-ca_sponsor-field_ca_sponsors_dates'.
   $fields['node-ca_sponsor-field_ca_sponsors_dates'] = array(
     'field_config' => array(
       'active' => '1',
@@ -152,6 +154,7 @@ function ca_sponsors_field_default_fields() {
       'field_name' => 'field_ca_sponsors_dates',
       'foreign keys' => array(),
       'indexes' => array(),
+      'locked' => '0',
       'module' => 'date',
       'settings' => array(
         'cache_count' => '4',
@@ -224,7 +227,7 @@ function ca_sponsors_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-ca_sponsor-field_ca_sponsors_email'
+  // Exported field: 'node-ca_sponsor-field_ca_sponsors_email'.
   $fields['node-ca_sponsor-field_ca_sponsors_email'] = array(
     'field_config' => array(
       'active' => '1',
@@ -237,6 +240,7 @@ function ca_sponsors_field_default_fields() {
       ),
       'foreign keys' => array(),
       'indexes' => array(),
+      'locked' => '0',
       'module' => 'email',
       'settings' => array(),
       'translatable' => '0',
@@ -281,7 +285,7 @@ function ca_sponsors_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-ca_sponsor-field_ca_sponsors_image'
+  // Exported field: 'node-ca_sponsor-field_ca_sponsors_image'.
   $fields['node-ca_sponsor-field_ca_sponsors_image'] = array(
     'field_config' => array(
       'active' => '1',
@@ -302,6 +306,7 @@ function ca_sponsors_field_default_fields() {
           0 => 'fid',
         ),
       ),
+      'locked' => '0',
       'module' => 'image',
       'settings' => array(
         'default_image' => 0,
@@ -338,6 +343,7 @@ function ca_sponsors_field_default_fields() {
       'required' => 0,
       'settings' => array(
         'alt_field' => 0,
+        'default_image' => 0,
         'file_directory' => '',
         'file_extensions' => 'png gif jpg jpeg',
         'max_filesize' => '',
@@ -359,7 +365,7 @@ function ca_sponsors_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-ca_sponsor-field_ca_sponsors_image_gallery'
+  // Exported field: 'node-ca_sponsor-field_ca_sponsors_image_gallery'.
   $fields['node-ca_sponsor-field_ca_sponsors_image_gallery'] = array(
     'field_config' => array(
       'active' => '1',
@@ -380,6 +386,7 @@ function ca_sponsors_field_default_fields() {
           0 => 'fid',
         ),
       ),
+      'locked' => '0',
       'module' => 'image',
       'settings' => array(
         'default_image' => 0,
@@ -416,6 +423,7 @@ function ca_sponsors_field_default_fields() {
       'required' => 0,
       'settings' => array(
         'alt_field' => 0,
+        'default_image' => 0,
         'file_directory' => '',
         'file_extensions' => 'png gif jpg jpeg',
         'max_filesize' => '',
@@ -437,7 +445,7 @@ function ca_sponsors_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-ca_sponsor-field_ca_sponsors_website'
+  // Exported field: 'node-ca_sponsor-field_ca_sponsors_website'.
   $fields['node-ca_sponsor-field_ca_sponsors_website'] = array(
     'field_config' => array(
       'active' => '1',
@@ -458,6 +466,7 @@ function ca_sponsors_field_default_fields() {
           0 => 'format',
         ),
       ),
+      'locked' => '0',
       'module' => 'text',
       'settings' => array(
         'max_length' => '255',
