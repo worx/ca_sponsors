@@ -147,7 +147,7 @@ function ca_sponsors_views_default_views() {
   $handler->display->display_options['fields']['view_node']['label'] = '';
   $handler->display->display_options['fields']['view_node']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['view_node']['text'] = 'Read More';
-  /* Field: Broken/missing handler */
+  /* Field: Content: AddToAny link */
   $handler->display->display_options['fields']['addtoany_link']['id'] = 'addtoany_link';
   $handler->display->display_options['fields']['addtoany_link']['table'] = 'node';
   $handler->display->display_options['fields']['addtoany_link']['field'] = 'addtoany_link';
@@ -246,11 +246,12 @@ function ca_sponsors_views_default_views() {
   $handler->display->display_options['fields']['field_ca_sponsors_about']['label'] = 'About Us';
   $handler->display->display_options['fields']['field_ca_sponsors_about']['alter']['max_length'] = '600';
   $handler->display->display_options['fields']['field_ca_sponsors_about']['alter']['html'] = TRUE;
+  $handler->display->display_options['fields']['field_ca_sponsors_about']['element_label_type'] = 'h2';
   $handler->display->display_options['fields']['field_ca_sponsors_about']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_ca_sponsors_about']['settings'] = array(
     'trim_length' => '700',
   );
-  /* Field: Broken/missing handler */
+  /* Field: Content: AddToAny link */
   $handler->display->display_options['fields']['addtoany_link']['id'] = 'addtoany_link';
   $handler->display->display_options['fields']['addtoany_link']['table'] = 'node';
   $handler->display->display_options['fields']['addtoany_link']['field'] = 'addtoany_link';
@@ -528,6 +529,7 @@ function ca_sponsors_views_default_views() {
     'ca_sponsor' => 'ca_sponsor',
   );
   $handler->display->display_options['pane_title'] = 'CA Sponsors: Administer';
+  $handler->display->display_options['inherit_panels_path'] = '1';
 
   /* Display: CA Sponsors: Archive Template One */
   $handler = $view->new_display('panel_pane', 'CA Sponsors: Archive Template One', 'ca_sponsors_archive_1');
@@ -597,7 +599,7 @@ function ca_sponsors_views_default_views() {
   $handler->display->display_options['fields']['view_node']['label'] = '';
   $handler->display->display_options['fields']['view_node']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['view_node']['text'] = 'Read More';
-  /* Field: Broken/missing handler */
+  /* Field: Content: AddToAny link */
   $handler->display->display_options['fields']['addtoany_link']['id'] = 'addtoany_link';
   $handler->display->display_options['fields']['addtoany_link']['table'] = 'node';
   $handler->display->display_options['fields']['addtoany_link']['field'] = 'addtoany_link';
