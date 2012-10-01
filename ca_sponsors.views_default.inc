@@ -147,7 +147,7 @@ function ca_sponsors_views_default_views() {
   $handler->display->display_options['fields']['view_node']['label'] = '';
   $handler->display->display_options['fields']['view_node']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['view_node']['text'] = 'Read More';
-  /* Field: Content: AddToAny link */
+  /* Field: Broken/missing handler */
   $handler->display->display_options['fields']['addtoany_link']['id'] = 'addtoany_link';
   $handler->display->display_options['fields']['addtoany_link']['table'] = 'node';
   $handler->display->display_options['fields']['addtoany_link']['field'] = 'addtoany_link';
@@ -251,7 +251,7 @@ function ca_sponsors_views_default_views() {
   $handler->display->display_options['fields']['field_ca_sponsors_about']['settings'] = array(
     'trim_length' => '700',
   );
-  /* Field: Content: AddToAny link */
+  /* Field: Broken/missing handler */
   $handler->display->display_options['fields']['addtoany_link']['id'] = 'addtoany_link';
   $handler->display->display_options['fields']['addtoany_link']['table'] = 'node';
   $handler->display->display_options['fields']['addtoany_link']['field'] = 'addtoany_link';
@@ -599,7 +599,7 @@ function ca_sponsors_views_default_views() {
   $handler->display->display_options['fields']['view_node']['label'] = '';
   $handler->display->display_options['fields']['view_node']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['view_node']['text'] = 'Read More';
-  /* Field: Content: AddToAny link */
+  /* Field: Broken/missing handler */
   $handler->display->display_options['fields']['addtoany_link']['id'] = 'addtoany_link';
   $handler->display->display_options['fields']['addtoany_link']['table'] = 'node';
   $handler->display->display_options['fields']['addtoany_link']['field'] = 'addtoany_link';
@@ -665,6 +665,29 @@ function ca_sponsors_views_default_views() {
     'field_data_field_ca_sponsors_dates.field_ca_sponsors_dates_value2' => 'field_data_field_ca_sponsors_dates.field_ca_sponsors_dates_value2',
   );
   $handler->display->display_options['pane_title'] = 'CA Sponsors: Archive Template One';
+
+  /* Display: CA Sponsors: Contact Details */
+  $handler = $view->new_display('panel_pane', 'CA Sponsors: Contact Details', 'ca_sponsors_contact_details');
+  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Email */
+  $handler->display->display_options['fields']['field_ca_sponsors_email']['id'] = 'field_ca_sponsors_email';
+  $handler->display->display_options['fields']['field_ca_sponsors_email']['table'] = 'field_data_field_ca_sponsors_email';
+  $handler->display->display_options['fields']['field_ca_sponsors_email']['field'] = 'field_ca_sponsors_email';
+  $handler->display->display_options['fields']['field_ca_sponsors_email']['label'] = 'Contact Us';
+  $handler->display->display_options['fields']['field_ca_sponsors_email']['type'] = 'email_contact';
+  /* Field: Content: Website Address */
+  $handler->display->display_options['fields']['field_ca_sponsors_website']['id'] = 'field_ca_sponsors_website';
+  $handler->display->display_options['fields']['field_ca_sponsors_website']['table'] = 'field_data_field_ca_sponsors_website';
+  $handler->display->display_options['fields']['field_ca_sponsors_website']['field'] = 'field_ca_sponsors_website';
+  $handler->display->display_options['fields']['field_ca_sponsors_website']['label'] = 'Website';
+  $handler->display->display_options['fields']['field_ca_sponsors_website']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_ca_sponsors_website']['alter']['text'] = '<a href="[field_ca_sponsors_website]">Homepage</a>';
+  /* Field: Content: Contact Info */
+  $handler->display->display_options['fields']['field_ca_sponsors_contact']['id'] = 'field_ca_sponsors_contact';
+  $handler->display->display_options['fields']['field_ca_sponsors_contact']['table'] = 'field_data_field_ca_sponsors_contact';
+  $handler->display->display_options['fields']['field_ca_sponsors_contact']['field'] = 'field_ca_sponsors_contact';
+  $handler->display->display_options['pane_title'] = 'CA Sponsors: Contact Details';
   $export['ca_sponsors'] = $view;
 
   return $export;
