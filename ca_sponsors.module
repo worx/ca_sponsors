@@ -5,3 +5,69 @@
  */
 
 include_once 'ca_sponsors.features.inc';
+
+/**
+ * Implements hook_menu()
+ */
+function ca_sponsors_menu() {
+  $items['admin/config/worx_features/sponsors'] = array(
+    'title' => 'Sponsors Configuration',
+    'description' => 'Override settings for ca_sponsors',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('ca_sponsors_settings_form'),
+    'access arguments' => array('worx features admin'),
+    'file' => 'ca_sponsors.admin.inc',
+    'file path' => drupal_get_path('module', 'ca_sponsors'),
+    'type' => MENU_NORMAL_ITEM,
+  );
+  $items['admin/config/worx_features/sponsors/general'] = array(
+    'title' => 'General Settings',
+    'description' => 'Override settings for ca_sponsors',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('ca_sponsors_settings_form'),
+    'access arguments' => array('worx features admin'),
+    'file' => 'ca_sponsors.admin.inc',
+    'file path' => drupal_get_path('module', 'ca_sponsors'),
+    'type' => MENU_DEFAULT_LOCAL_TASK,
+  );
+  
+  return $items;
+}
+
+/**
+ * implements hook_menu_alter().
+ */
+function ca_sponsors_menu_alter(&$items) {
+  $items['event']['title'] = variable_get('ca_sponsors_menu_title', 'Sponsors');
+}
+
+/**
+ * Implements hook_panels_pre_render().
+ */
+function ca_sponsors_panels_pre_render($panel, $renderer) {
+  if (isset($panel->content['new-6']) && $panel->content['new-6']->subtype == 'ca_event-ca_event_list_1') {
+    $panel->title = variable_get('ca_sponsors_panel_title', 'Sponsors');
+  }
+}
+
+/**
+ * Implements hook_views_pre_render().
+ */
+function ca_sponsors_views_pre_view(&$view, &$display_id, &$args) {
+  if ($display_id == 'ca_event_list_1') {
+    $view->set_items_per_page(variable_get('ca_sponsors_list_count', 5));
+  }
+  elseif ($display_id == 'ca_event_block_1') {
+    $view->set_items_per_page(variable_get('ca_sponsors_block_count', 1));
+  }
+}
+
+/**
+* Implementation of hook_ctools_plugin_directory()
+*/
+function ca_sponsors_ctools_plugin_directory($owner, $plugin_type) {
+  if ($owner == 'ctools') {
+    return 'plugins/' . $plugin_type;;
+  }
+}
+
