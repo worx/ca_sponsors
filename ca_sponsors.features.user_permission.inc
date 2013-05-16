@@ -14,7 +14,7 @@ function ca_sponsors_user_default_permissions() {
   $permissions['create ca_sponsor content'] = array(
     'name' => 'create ca_sponsor content',
     'roles' => array(
-      'administrator => 'administrator',
+      'administrator' => 'administrator',
       'sponsors admin' => 'sponsors admin',
       'webmaster' => 'webmaster',
     ),
@@ -25,7 +25,7 @@ function ca_sponsors_user_default_permissions() {
   $permissions['delete any ca_sponsor content'] = array(
     'name' => 'delete any ca_sponsor content',
     'roles' => array(
-      'administrator => 'administrator',
+      'administrator' => 'administrator',
       'sponsors admin' => 'sponsors admin',
       'webmaster' => 'webmaster',
     ),
@@ -36,7 +36,7 @@ function ca_sponsors_user_default_permissions() {
   $permissions['delete own ca_sponsor content'] = array(
     'name' => 'delete own ca_sponsor content',
     'roles' => array(
-      'administrator => 'administrator',
+      'administrator' => 'administrator',
       'sponsors admin' => 'sponsors admin',
       'sponsors user' => 'sponsors user',
       'webmaster' => 'webmaster',
@@ -48,7 +48,7 @@ function ca_sponsors_user_default_permissions() {
   $permissions['edit any ca_sponsor content'] = array(
     'name' => 'edit any ca_sponsor content',
     'roles' => array(
-      'administrator => 'administrator',
+      'administrator' => 'administrator',
       'sponsors admin' => 'sponsors admin',
       'webmaster' => 'webmaster',
     ),
@@ -59,7 +59,7 @@ function ca_sponsors_user_default_permissions() {
   $permissions['edit own ca_sponsor content'] = array(
     'name' => 'edit own ca_sponsor content',
     'roles' => array(
-      'administrator => 'administrator',
+      'administrator' => 'administrator',
       'sponsors admin' => 'sponsors admin',
       'sponsors user' => 'sponsors user',
       'webmaster' => 'webmaster',
