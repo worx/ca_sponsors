@@ -13,14 +13,14 @@ function ca_sponsors_user_default_roles() {
   // Exported role: sponsors admin.
   $roles['sponsors admin'] = array(
     'name' => 'sponsors admin',
-    'weight' => '6',
+    'weight' => 6,
     'machine_name' => 'sponsors_admin',
   );
 
   // Exported role: sponsors user.
   $roles['sponsors user'] = array(
     'name' => 'sponsors user',
-    'weight' => '7',
+    'weight' => 7,
     'machine_name' => 'sponsors_user',
   );
 

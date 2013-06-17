@@ -38,15 +38,17 @@ function ca_sponsors_menu() {
  * implements hook_menu_alter().
  */
 function ca_sponsors_menu_alter(&$items) {
-  $items['event']['title'] = variable_get('ca_sponsors_menu_title', 'Sponsors');
+  $items['sponsors']['title'] = variable_get('ca_sponsors_menu_title', 'Sponsors');
 }
 
 /**
  * Implements hook_panels_pre_render().
  */
 function ca_sponsors_panels_pre_render($panel, $renderer) {
-  if (isset($panel->content['new-6']) && $panel->content['new-6']->subtype == 'ca_event-ca_event_list_1') {
-    $panel->title = variable_get('ca_sponsors_panel_title', 'Sponsors');
+  foreach ($panel->content as $key => $value) {
+    if ($value->subtype == 'ca_sponsors-ca_sponsors_list_1') {
+      $panel->title = variable_get('ca_sponsors_panel_title', 'Sponsors');
+    }
   }
 }
 

@@ -15,6 +15,14 @@ function ca_sponsors_install() {
     'private_pid' => 2,
   );
 
+  $imce_roles_profiles[5868810] = $imce_roles_profiles_vaule;
+	
+  $imce_roles_profiles_vaule = array (
+    'weight' => '-8',
+    'public_pid' => 3,
+    'private_pid' => 3,
+  );
+
   $imce_roles_profiles[149358723] = $imce_roles_profiles_vaule;
 
   variable_set('imce_roles_profiles', $imce_roles_profiles);
