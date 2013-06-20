@@ -26,4 +26,7 @@ function ca_sponsors_install() {
   $imce_roles_profiles[149358723] = $imce_roles_profiles_vaule;
 
   variable_set('imce_roles_profiles', $imce_roles_profiles);
+	
+  // Set the Pathauto for the node.
+  variable_set('pathauto_node_ca_sponsor_pattern', 'sponsors/[node:title]');
 }
