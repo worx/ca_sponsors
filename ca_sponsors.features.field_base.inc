@@ -86,6 +86,7 @@ function ca_sponsors_field_default_field_bases() {
         'second' => 0,
         'year' => 'year',
       ),
+      'repeat' => 0,
       'timezone_db' => 'UTC',
       'todate' => 'optional',
       'tz_handling' => 'site',
