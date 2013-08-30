@@ -99,7 +99,7 @@ function ca_sponsors_views_default_views() {
   $handler->display->display_options['empty']['area']['table'] = 'views';
   $handler->display->display_options['empty']['area']['field'] = 'area';
   $handler->display->display_options['empty']['area']['empty'] = TRUE;
-  $handler->display->display_options['empty']['area']['content'] = 'Coming Soon.';
+  $handler->display->display_options['empty']['area']['content'] = 'Coming soon.';
   $handler->display->display_options['empty']['area']['format'] = 'filtered_html';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Content: Title */
@@ -223,6 +223,8 @@ function ca_sponsors_views_default_views() {
     'field_data_field_ca_sponsors_dates.field_ca_sponsors_dates_value2' => 'field_data_field_ca_sponsors_dates.field_ca_sponsors_dates_value2',
   );
   $handler->display->display_options['pane_title'] = 'CA Sponsors: List Template One';
+  $handler->display->display_options['pane_category']['name'] = 'CA List';
+  $handler->display->display_options['pane_category']['weight'] = '0';
 
   /* Display: CA Sponsors: Node Template One */
   $handler = $view->new_display('panel_pane', 'CA Sponsors: Node Template One', 'ca_sponsors_node_1');
@@ -278,6 +280,8 @@ function ca_sponsors_views_default_views() {
   $handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
   $handler->display->display_options['pane_title'] = 'CA Sponsors: Node Template One';
+  $handler->display->display_options['pane_category']['name'] = 'CA Node';
+  $handler->display->display_options['pane_category']['weight'] = '0';
 
   /* Display: CA Sponsors: Gallery */
   $handler = $view->new_display('panel_pane', 'CA Sponsors: Gallery', 'ca_sponsors_gallery');
@@ -325,6 +329,8 @@ function ca_sponsors_views_default_views() {
   $handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
   $handler->display->display_options['pane_title'] = 'CA Sponsors: Gallery';
+  $handler->display->display_options['pane_category']['name'] = 'CA Node';
+  $handler->display->display_options['pane_category']['weight'] = '0';
 
   /* Display: CA Sponsors: Administer */
   $handler = $view->new_display('panel_pane', 'CA Sponsors: Administer', 'ca_sponsors_admin');
@@ -538,6 +544,8 @@ function ca_sponsors_views_default_views() {
     'ca_sponsor' => 'ca_sponsor',
   );
   $handler->display->display_options['pane_title'] = 'CA Sponsors: Administer';
+  $handler->display->display_options['pane_category']['name'] = 'CA Admin';
+  $handler->display->display_options['pane_category']['weight'] = '0';
   $handler->display->display_options['inherit_panels_path'] = '1';
 
   /* Display: CA Sponsors: Archive Template One */
@@ -674,6 +682,8 @@ function ca_sponsors_views_default_views() {
     'field_data_field_ca_sponsors_dates.field_ca_sponsors_dates_value2' => 'field_data_field_ca_sponsors_dates.field_ca_sponsors_dates_value2',
   );
   $handler->display->display_options['pane_title'] = 'CA Sponsors: Archive Template One';
+  $handler->display->display_options['pane_category']['name'] = 'CA List';
+  $handler->display->display_options['pane_category']['weight'] = '0';
 
   /* Display: CA Sponsors: Contact Details */
   $handler = $view->new_display('panel_pane', 'CA Sponsors: Contact Details', 'ca_sponsors_contact_details');
@@ -697,6 +707,8 @@ function ca_sponsors_views_default_views() {
   $handler->display->display_options['fields']['field_ca_sponsors_contact']['table'] = 'field_data_field_ca_sponsors_contact';
   $handler->display->display_options['fields']['field_ca_sponsors_contact']['field'] = 'field_ca_sponsors_contact';
   $handler->display->display_options['pane_title'] = 'CA Sponsors: Contact Details';
+  $handler->display->display_options['pane_category']['name'] = 'CA Node';
+  $handler->display->display_options['pane_category']['weight'] = '0';
   $export['ca_sponsors'] = $view;
 
   return $export;
