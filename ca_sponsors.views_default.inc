@@ -22,6 +22,7 @@ function ca_sponsors_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['use_ajax'] = TRUE;
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
@@ -64,6 +65,11 @@ function ca_sponsors_views_default_views() {
   $handler->display->display_options['fields']['field_ca_sponsors_about']['settings'] = array(
     'trim_length' => '700',
   );
+  /* Sort criterion: Content: Post date */
+  $handler->display->display_options['sorts']['created']['id'] = 'created';
+  $handler->display->display_options['sorts']['created']['table'] = 'node';
+  $handler->display->display_options['sorts']['created']['field'] = 'created';
+  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
@@ -81,6 +87,7 @@ function ca_sponsors_views_default_views() {
 
   /* Display: CA Sponsors: List Template One */
   $handler = $view->new_display('panel_pane', 'CA Sponsors: List Template One', 'ca_sponsors_list_1');
+  $handler->display->display_options['defaults']['use_ajax'] = FALSE;
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'full';
@@ -331,6 +338,7 @@ function ca_sponsors_views_default_views() {
   $handler->display->display_options['pane_title'] = 'CA Sponsors: Gallery';
   $handler->display->display_options['pane_category']['name'] = 'CA Node';
   $handler->display->display_options['pane_category']['weight'] = '0';
+  $handler->display->display_options['inherit_panels_path'] = '1';
 
   /* Display: CA Sponsors: Administer */
   $handler = $view->new_display('panel_pane', 'CA Sponsors: Administer', 'ca_sponsors_admin');
@@ -550,6 +558,7 @@ function ca_sponsors_views_default_views() {
 
   /* Display: CA Sponsors: Archive Template One */
   $handler = $view->new_display('panel_pane', 'CA Sponsors: Archive Template One', 'ca_sponsors_archive_1');
+  $handler->display->display_options['defaults']['use_ajax'] = FALSE;
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'full';
@@ -562,6 +571,14 @@ function ca_sponsors_views_default_views() {
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['empty'] = FALSE;
+  /* No results behavior: Global: Text area */
+  $handler->display->display_options['empty']['area']['id'] = 'area';
+  $handler->display->display_options['empty']['area']['table'] = 'views';
+  $handler->display->display_options['empty']['area']['field'] = 'area';
+  $handler->display->display_options['empty']['area']['empty'] = TRUE;
+  $handler->display->display_options['empty']['area']['content'] = 'None archived ';
+  $handler->display->display_options['empty']['area']['format'] = 'filtered_html';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
@@ -706,9 +723,37 @@ function ca_sponsors_views_default_views() {
   $handler->display->display_options['fields']['field_ca_sponsors_contact']['id'] = 'field_ca_sponsors_contact';
   $handler->display->display_options['fields']['field_ca_sponsors_contact']['table'] = 'field_data_field_ca_sponsors_contact';
   $handler->display->display_options['fields']['field_ca_sponsors_contact']['field'] = 'field_ca_sponsors_contact';
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Content: Nid */
+  $handler->display->display_options['arguments']['nid']['id'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['table'] = 'node';
+  $handler->display->display_options['arguments']['nid']['field'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['nid']['default_argument_type'] = 'node';
+  $handler->display->display_options['arguments']['nid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
   $handler->display->display_options['pane_title'] = 'CA Sponsors: Contact Details';
   $handler->display->display_options['pane_category']['name'] = 'CA Node';
   $handler->display->display_options['pane_category']['weight'] = '0';
+  $handler->display->display_options['inherit_panels_path'] = '1';
+
+  /* Display: Feed */
+  $handler = $view->new_display('feed', 'Feed', 'ca_sponsors_feed');
+  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['style_plugin'] = 'rss';
+  $handler->display->display_options['row_plugin'] = 'node_rss';
+  $handler->display->display_options['path'] = 'sponsors/feed';
+  $handler->display->display_options['displays'] = array(
+    'ca_sponsors_list_1' => 'ca_sponsors_list_1',
+    'default' => 0,
+    'ca_sponsors_node_1' => 0,
+    'ca_sponsors_gallery' => 0,
+    'ca_sponsors_admin' => 0,
+    'ca_sponsors_archive_1' => 0,
+    'ca_sponsors_contact_details' => 0,
+  );
   $export['ca_sponsors'] = $view;
 
   return $export;
