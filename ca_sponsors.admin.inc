@@ -38,13 +38,6 @@ function ca_sponsors_settings_form() {
     '#required' => TRUE,
     '#description' => t('How many sponsorss would you like displayed per page?'),
   );
-  $form['ca_sponsors_block_count'] = array(
-    '#type' => 'textfield',
-    '#title' => t('Sponsors in the block'),
-    '#default_value' => variable_get('ca_sponsors_block_count', 1),
-    '#required' => TRUE,
-    '#description' => t('How many sponsorss would you like displayed in the block?'),
-  );
   $form['ca_sponsors_list_template'] = array(
     '#type' => 'select',
     '#title' => t('Sponsor\'s list template'),

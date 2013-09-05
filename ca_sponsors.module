@@ -56,11 +56,8 @@ function ca_sponsors_panels_pre_render($panel, $renderer) {
  * Implements hook_views_pre_render().
  */
 function ca_sponsors_views_pre_view(&$view, &$display_id, &$args) {
-  if ($display_id == 'ca_event_list_1') {
+  if ($display_id == 'ca_sponsors_list_1') {
     $view->set_items_per_page(variable_get('ca_sponsors_list_count', 5));
-  }
-  elseif ($display_id == 'ca_event_block_1') {
-    $view->set_items_per_page(variable_get('ca_sponsors_block_count', 1));
   }
 }
 
