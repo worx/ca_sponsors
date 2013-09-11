@@ -38,28 +38,6 @@ function ca_sponsors_settings_form() {
     '#required' => TRUE,
     '#description' => t('How many sponsorss would you like displayed per page?'),
   );
-  $form['ca_sponsors_list_template'] = array(
-    '#type' => 'select',
-    '#title' => t('Sponsor\'s list template'),
-    '#options' => array(
-      'ca_sponsors_list_template_one' => t('Template one'),
-      'ca_sponsors_list_template_two' => t('Template two'),
-      'ca_sponsors_list_template_three' => t('Template three'),
-    ),
-    '#required' => TRUE,
-    '#default_value' => variable_get('ca_sponsors_list_template', 'ca_sponsors_list_template_one'),
-  );
-  $form['ca_sponsors_node_template'] = array(
-    '#type' => 'select',
-    '#title' => t('Sponsor\'s node template'),
-    '#options' => array(
-      'ca_sponsors_node_template_one' => t('Template one'),
-      'ca_sponsors_node_template_two' => t('Template two'),
-      'ca_sponsors_node_template_three' => t('Template three'),
-    ),
-    '#required' => TRUE,
-    '#default_value' => variable_get('ca_sponsors_node_template', 'ca_sponsors_node_template_one'),
-  );
   $form['actions'] = array(
     '#type' => 'actions',
   );
