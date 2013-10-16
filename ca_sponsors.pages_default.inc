@@ -528,7 +528,6 @@ $result = db_select(\'node\', \'n\')
   ->execute()
   ->fetchAssoc();
 
-print_r($result);
 if (isset($result[\'nid\'])) {
   return FALSE;
 }
