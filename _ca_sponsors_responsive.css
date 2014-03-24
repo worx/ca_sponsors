@@ -1,0 +1,59 @@
+.view-display-id-ca_sponsors_list_1 .views-field-field-ca-sponsors-image {
+    float: none;
+    padding: 0 0 5px;
+}
+
+.panels-flexible-region-new-center {
+  width: 100%;
+}
+
+.panels-flexible-region-new-region_right {
+  width: 100%;
+}
+
+.panels-flexible-region-new-region_right {
+  width: 100%;
+}
+
+.view-display-id-ca_sponsors_gallery table, 
+.view-display-id-ca_sponsors_gallery tbody, 
+.view-display-id-ca_sponsors_gallery tr, 
+.view-display-id-ca_sponsors_gallery tr td {
+  display:block;
+  width: 100%;
+  border: none;
+}
+
+.view-display-id-ca_sponsors_gallery tr td {
+  float: left;
+  padding: 0;
+  vertical-align: text-top;
+  text-align: center;
+}
+
+
+@media only screen and (min-width:481px) {
+  .view-display-id-ca_sponsors_list_1 .views-field-field-ca-sponsors-image {
+    float: left;
+    padding: 0 15px 5px 0;
+  }
+
+  .view-display-id-ca_sponsors_gallery table,
+  .view-display-id-ca_sponsors_gallery tbody {display: table;}
+  .view-display-id-ca_sponsors_gallery tr {display: table-row;}
+  .view-display-id-ca_sponsors_gallery tr td {display: table-celll;}
+
+  .view-display-id-ca_sponsors_gallery td {
+    width: 50%;
+  }
+}
+
+@media only screen and (min-width:900px) {
+  .panels-flexible-region-new-center {
+    width: 49.4%;
+  }
+
+  .panels-flexible-region-new-region_right {
+    width: 49.4%;
+  }
+}
