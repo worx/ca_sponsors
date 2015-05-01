@@ -126,7 +126,7 @@ function ca_sponsors_views_default_views() {
   $handler->display->display_options['fields']['field_ca_sponsors_image']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_ca_sponsors_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_ca_sponsors_image']['settings'] = array(
-    'image_style' => 'default',
+    'image_style' => 'crop_default_portrait',
     'image_link' => 'content',
   );
   $handler->display->display_options['fields']['field_ca_sponsors_image']['delta_limit'] = '1';
@@ -250,11 +250,13 @@ function ca_sponsors_views_default_views() {
   $handler->display->display_options['fields']['field_ca_sponsors_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_ca_sponsors_image']['type'] = 'colorbox';
   $handler->display->display_options['fields']['field_ca_sponsors_image']['settings'] = array(
-    'colorbox_node_style' => 'default',
+    'colorbox_node_style' => 'crop_default_portrait',
+    'colorbox_node_style_first' => '',
     'colorbox_image_style' => '',
     'colorbox_gallery' => 'post',
     'colorbox_gallery_custom' => '',
     'colorbox_caption' => 'auto',
+    'colorbox_caption_custom' => '',
   );
   $handler->display->display_options['fields']['field_ca_sponsors_image']['delta_limit'] = '1';
   $handler->display->display_options['fields']['field_ca_sponsors_image']['delta_offset'] = '0';
@@ -317,11 +319,13 @@ function ca_sponsors_views_default_views() {
   $handler->display->display_options['fields']['field_ca_sponsors_image_gallery']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_ca_sponsors_image_gallery']['type'] = 'colorbox';
   $handler->display->display_options['fields']['field_ca_sponsors_image_gallery']['settings'] = array(
-    'colorbox_node_style' => 'default',
+    'colorbox_node_style' => 'crop_default_landscape',
+    'colorbox_node_style_first' => '',
     'colorbox_image_style' => '',
     'colorbox_gallery' => 'page',
     'colorbox_gallery_custom' => '',
     'colorbox_caption' => 'auto',
+    'colorbox_caption_custom' => '',
   );
   $handler->display->display_options['fields']['field_ca_sponsors_image_gallery']['group_rows'] = FALSE;
   $handler->display->display_options['fields']['field_ca_sponsors_image_gallery']['delta_offset'] = '0';
