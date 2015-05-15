@@ -14,6 +14,7 @@ dependencies[] = date_views
 dependencies[] = email
 dependencies[] = features
 dependencies[] = image
+dependencies[] = multiupload_imagefield_widget
 dependencies[] = node
 dependencies[] = page_manager
 dependencies[] = panels
