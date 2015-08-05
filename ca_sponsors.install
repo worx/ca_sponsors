@@ -29,4 +29,17 @@ function ca_sponsors_install() {
 
   // Set the Pathauto for the node.
   variable_set('pathauto_node_ca_sponsor_pattern', 'sponsors/[node:title]');
+
+  // Get the worx_aurora_base_enable variable to default set if not already set.
+  variable_get('worx_aurora_base_enable', 'worx_aurora_base_disabled');
+}
+
+/**
+ * Get the worx_aurora_base_enable variable to set a default if not already set.
+ */
+function ca_sponsors_update_7000() {
+  // Get the worx_aurora_base_enable variable to set a default if not already set.
+  variable_get('worx_aurora_base_enable', 'worx_aurora_base_disabled');
+    )
+  );
 }
