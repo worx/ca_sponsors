@@ -40,6 +40,4 @@ function ca_sponsors_install() {
 function ca_sponsors_update_7000() {
   // Get the worx_aurora_base_enable variable to set a default if not already set.
   variable_get('worx_aurora_base_enable', 'worx_aurora_base_disabled');
-    )
-  );
 }
