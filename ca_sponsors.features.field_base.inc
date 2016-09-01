@@ -10,7 +10,7 @@
 function ca_sponsors_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_ca_sponsors_about'
+  // Exported field_base: 'field_ca_sponsors_about'.
   $field_bases['field_ca_sponsors_about'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -29,7 +29,7 @@ function ca_sponsors_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_ca_sponsors_contact'
+  // Exported field_base: 'field_ca_sponsors_contact'.
   $field_bases['field_ca_sponsors_contact'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -48,7 +48,7 @@ function ca_sponsors_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_ca_sponsors_dates'
+  // Exported field_base: 'field_ca_sponsors_dates'.
   $field_bases['field_ca_sponsors_dates'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -78,7 +78,7 @@ function ca_sponsors_field_default_field_bases() {
     'type' => 'datetime',
   );
 
-  // Exported field_base: 'field_ca_sponsors_email'
+  // Exported field_base: 'field_ca_sponsors_email'.
   $field_bases['field_ca_sponsors_email'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -96,7 +96,7 @@ function ca_sponsors_field_default_field_bases() {
     'type' => 'email',
   );
 
-  // Exported field_base: 'field_ca_sponsors_image'
+  // Exported field_base: 'field_ca_sponsors_image'.
   $field_bases['field_ca_sponsors_image'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -118,7 +118,7 @@ function ca_sponsors_field_default_field_bases() {
     'type' => 'image',
   );
 
-  // Exported field_base: 'field_ca_sponsors_image_gallery'
+  // Exported field_base: 'field_ca_sponsors_image_gallery'.
   $field_bases['field_ca_sponsors_image_gallery'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -140,7 +140,7 @@ function ca_sponsors_field_default_field_bases() {
     'type' => 'image',
   );
 
-  // Exported field_base: 'field_ca_sponsors_website'
+  // Exported field_base: 'field_ca_sponsors_website'.
   $field_bases['field_ca_sponsors_website'] = array(
     'active' => 1,
     'cardinality' => 1,

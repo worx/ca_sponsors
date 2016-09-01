@@ -10,7 +10,7 @@
 function ca_sponsors_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-ca_sponsor-field_ca_sponsors_about'
+  // Exported field_instance: 'node-ca_sponsor-field_ca_sponsors_about'.
   $field_instances['node-ca_sponsor-field_ca_sponsors_about'] = array(
     'bundle' => 'ca_sponsor',
     'default_value' => NULL,
@@ -50,7 +50,7 @@ function ca_sponsors_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-ca_sponsor-field_ca_sponsors_contact'
+  // Exported field_instance: 'node-ca_sponsor-field_ca_sponsors_contact'.
   $field_instances['node-ca_sponsor-field_ca_sponsors_contact'] = array(
     'bundle' => 'ca_sponsor',
     'default_value' => NULL,
@@ -90,7 +90,7 @@ function ca_sponsors_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-ca_sponsor-field_ca_sponsors_dates'
+  // Exported field_instance: 'node-ca_sponsor-field_ca_sponsors_dates'.
   $field_instances['node-ca_sponsor-field_ca_sponsors_dates'] = array(
     'bundle' => 'ca_sponsor',
     'default_value' => NULL,
@@ -106,6 +106,7 @@ function ca_sponsors_field_default_field_instances() {
           'multiple_from' => '',
           'multiple_number' => '',
           'multiple_to' => '',
+          'show_remaining_days' => FALSE,
           'show_repeat_rule' => 'show',
         ),
         'type' => 'date_default',
@@ -147,7 +148,7 @@ function ca_sponsors_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-ca_sponsor-field_ca_sponsors_email'
+  // Exported field_instance: 'node-ca_sponsor-field_ca_sponsors_email'.
   $field_instances['node-ca_sponsor-field_ca_sponsors_email'] = array(
     'bundle' => 'ca_sponsor',
     'default_value' => NULL,
@@ -186,7 +187,7 @@ function ca_sponsors_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-ca_sponsor-field_ca_sponsors_image'
+  // Exported field_instance: 'node-ca_sponsor-field_ca_sponsors_image'.
   $field_instances['node-ca_sponsor-field_ca_sponsors_image'] = array(
     'bundle' => 'ca_sponsor',
     'deleted' => 0,
@@ -250,7 +251,7 @@ function ca_sponsors_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-ca_sponsor-field_ca_sponsors_image_gallery'
+  // Exported field_instance: 'node-ca_sponsor-field_ca_sponsors_image_gallery'.
   $field_instances['node-ca_sponsor-field_ca_sponsors_image_gallery'] = array(
     'bundle' => 'ca_sponsor',
     'deleted' => 0,
@@ -314,7 +315,7 @@ function ca_sponsors_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-ca_sponsor-field_ca_sponsors_website'
+  // Exported field_instance: 'node-ca_sponsor-field_ca_sponsors_website'.
   $field_instances['node-ca_sponsor-field_ca_sponsors_website'] = array(
     'bundle' => 'ca_sponsor',
     'default_value' => NULL,
