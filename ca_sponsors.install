@@ -32,6 +32,90 @@ function ca_sponsors_install() {
 
   // Get the worx_aurora_base_enable variable to default set if not already set.
   variable_get('worx_aurora_base_enable', 'worx_aurora_base_disabled');
+
+  // Set the permissions for Services Admin.
+  user_role_change_permissions(5868810, 
+    array(
+      'create ca_sponsor content' => TRUE,
+      'delete any ca_sponsor content' => TRUE,
+      'delete own ca_sponsor content' => TRUE,
+      'edit any ca_sponsor content' => TRUE,
+      'edit own ca_sponsor content' => TRUE,
+    )
+  );
+
+  // Set the permissions for Services Creator.
+  user_role_change_permissions(149358723, 
+    array(
+      'create ca_sponsor content' => TRUE,
+      'delete own ca_sponsor content' => TRUE,
+      'edit own ca_sponsor content' => TRUE,
+    )
+  );
+
+  // Set the permissions for Administrator
+  user_role_change_permissions(3, 
+    array(
+      'create ca_sponsor content' => TRUE,
+      'delete any ca_sponsor content' => TRUE,
+      'delete own ca_sponsor content' => TRUE,
+      'edit any ca_sponsor content' => TRUE,
+      'edit own ca_sponsor content' => TRUE,
+    )
+  );
+
+  // Set the permissions for Webmaster
+  user_role_change_permissions(4, 
+    array(
+      'create ca_sponsor content' => TRUE,
+      'delete any ca_sponsor content' => TRUE,
+      'delete own ca_sponsor content' => TRUE,
+      'edit any ca_sponsor content' => TRUE,
+      'edit own ca_sponsor content' => TRUE,
+    )
+  );
+
+  // Set the permissions for Services Admin.
+  user_role_change_permissions(5868810, 
+    array(
+      'create ca_sponsor content' => TRUE,
+      'delete any ca_sponsor content' => TRUE,
+      'delete own ca_sponsor content' => TRUE,
+      'edit any ca_sponsor content' => TRUE,
+      'edit own ca_sponsor content' => TRUE,
+    )
+  );
+
+  // Set the permissions for Services Creator.
+  user_role_change_permissions(149358723, 
+    array(
+      'create ca_sponsor content' => TRUE,
+      'delete own ca_sponsor content' => TRUE,
+      'edit own ca_sponsor content' => TRUE,
+    )
+  );
+
+  // Set the permissions for Administrator
+  user_role_change_permissions(3, 
+    array(
+      'create ca_sponsor content' => TRUE,
+      'delete any ca_sponsor content' => TRUE,
+      'delete own ca_sponsor content' => TRUE,
+      'edit any ca_sponsor content' => TRUE,
+      'edit own ca_sponsor content' => TRUE,
+    )
+  );
+
+  // Set the permissions for Webmaster
+  user_role_change_permissions(4, 
+    array(
+      'create ca_sponsor content' => TRUE,
+      'delete any ca_sponsor content' => TRUE,
+      'delete own ca_sponsor content' => TRUE,
+      'edit any ca_sponsor content' => TRUE,
+      'edit own ca_sponsor content' => TRUE,
+    )
+  );
 }
 
 /**
@@ -40,4 +124,52 @@ function ca_sponsors_install() {
 function ca_sponsors_update_7000() {
   // Get the worx_aurora_base_enable variable to set a default if not already set.
   variable_get('worx_aurora_base_enable', 'worx_aurora_base_disabled');
+}
+
+/**
+ * Set the permissions for Services Admin, Services Creator, Webmaster and Administrator as a one time event rather than handled with features to allow additonal 
+ * roles to be given these permissions without overridding the feature.
+ */
+function ca_sponsors_update_7001() {
+  // Set the permissions for Services Admin.
+  user_role_change_permissions(5868810, 
+    array(
+      'create ca_sponsor content' => TRUE,
+      'delete any ca_sponsor content' => TRUE,
+      'delete own ca_sponsor content' => TRUE,
+      'edit any ca_sponsor content' => TRUE,
+      'edit own ca_sponsor content' => TRUE,
+    )
+  );
+
+  // Set the permissions for Services Creator.
+  user_role_change_permissions(149358723, 
+    array(
+      'create ca_sponsor content' => TRUE,
+      'delete own ca_sponsor content' => TRUE,
+      'edit own ca_sponsor content' => TRUE,
+    )
+  );
+
+  // Set the permissions for Administrator
+  user_role_change_permissions(3, 
+    array(
+      'create ca_sponsor content' => TRUE,
+      'delete any ca_sponsor content' => TRUE,
+      'delete own ca_sponsor content' => TRUE,
+      'edit any ca_sponsor content' => TRUE,
+      'edit own ca_sponsor content' => TRUE,
+    )
+  );
+
+  // Set the permissions for Webmaster
+  user_role_change_permissions(4, 
+    array(
+      'create ca_sponsor content' => TRUE,
+      'delete any ca_sponsor content' => TRUE,
+      'delete own ca_sponsor content' => TRUE,
+      'edit any ca_sponsor content' => TRUE,
+      'edit own ca_sponsor content' => TRUE,
+    )
+  );
 }
