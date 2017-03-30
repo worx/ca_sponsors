@@ -101,8 +101,8 @@ function ca_sponsors_default_page_manager_handlers() {
   $display->cache = array();
   $display->title = '%node:title';
   $display->uuid = 'b9a69f35-54bf-4cac-b300-2c6c0f97c651';
-  $display->storage_type = '';
-  $display->storage_id = '';
+  $display->storage_type = 'page_manager';
+  $display->storage_id = 'ca_sponsors_node_view_panel_context';
   $display->content = array();
   $display->panels = array();
   $pane = new stdClass();
@@ -312,8 +312,8 @@ function ca_sponsors_default_page_manager_pages() {
   $display->cache = array();
   $display->title = 'Sponsors';
   $display->uuid = '25c3d999-bfad-430f-93c6-09c1a901b66b';
-  $display->storage_type = '';
-  $display->storage_id = '';
+  $display->storage_type = 'page_manager';
+  $display->storage_id = 'page_ca_sponsors_administer_panel_context';
   $display->content = array();
   $display->panels = array();
   $pane = new stdClass();
@@ -398,8 +398,8 @@ function ca_sponsors_default_page_manager_pages() {
   $display->cache = array();
   $display->title = 'Sponsors Archive';
   $display->uuid = '1eb3039c-1cef-4b42-b53b-8e949b546822';
-  $display->storage_type = '';
-  $display->storage_id = '';
+  $display->storage_type = 'page_manager';
+  $display->storage_id = 'page_ca_sponsors_archive_panel_context';
   $display->content = array();
   $display->panels = array();
   $pane = new stdClass();
@@ -484,8 +484,8 @@ function ca_sponsors_default_page_manager_pages() {
   $display->cache = array();
   $display->title = '';
   $display->uuid = '35985c09-b807-453a-b26c-aff5637e1dc3';
-  $display->storage_type = '';
-  $display->storage_id = '';
+  $display->storage_type = 'page_manager';
+  $display->storage_id = 'page_ca_sponsors_list_view_panel_context';
   $display->content = array();
   $display->panels = array();
   $pane = new stdClass();
@@ -554,8 +554,8 @@ function ca_sponsors_default_page_manager_pages() {
   $display->cache = array();
   $display->title = '';
   $display->uuid = '35985c09-b807-453a-b26c-aff5637e1dc3';
-  $display->storage_type = '';
-  $display->storage_id = '';
+  $display->storage_type = 'page_manager';
+  $display->storage_id = 'page_ca_sponsors_list_view__panel_context_2d42c17c-9baa-401b-bb56-e4ce341aa5ae';
   $display->content = array();
   $display->panels = array();
   $pane = new stdClass();
